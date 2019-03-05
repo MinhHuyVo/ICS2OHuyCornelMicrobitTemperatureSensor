@@ -1,0 +1,39 @@
+First program (in JavaScript language)
+input.onGesture(Gesture.Shake, function () {
+    basic.showNumber(input.temperature())
+})
+basic.forever(function () {
+	
+})
+
+First program (in Python language)
+from microbit import *
+
+while True:
+    if accelerometer.was_gesture('shake'):
+        display.scroll(temperature())
+
+Second program (in JavaScript language)
+input.onButtonPressed(Button.A, function () {
+    basic.showNumber(input.temperature())
+    basic.showLeds(`
+        # . # # #
+        . # . . .
+        . # . . .
+        . # . . .
+        . . # # #
+        `)
+})
+input.onButtonPressed(Button.B, function () {
+    basic.showNumber(input.temperature() / 10 * 18 + 32)
+    basic.showLeds(`
+        # . # # #
+        . . # . .
+        . . # # .
+        . . # . .
+        . . # . .
+        `)
+})
+basic.forever(function () {
+	
+})
